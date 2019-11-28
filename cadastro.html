@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/png/favicon.png" type="image/png" />
+    <title>Sign Up</title>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="semantic/semantic.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script src="semantic/semantic.js"></script>
+</head>
+<body>
+    
+    <div id="load" class="ui inverted dimmer">
+        <div class="ui large indeterminate text loader">Loading</div>
+    </div>
+    
+    <div class="ui middle aligned center aligned grid">
+        
+        <div class="column">
+            <div class="ui warning message hidden">
+                
+                <p id="msg-warning"></p>
+            </div>
+            <div class="ui segment" style="padding: 25px; margin-top: 0px;margin-bottom: 0px;">
+                <div id="loader-login" class="ui inverted dimmer">
+                    <div class="ui large indeterminate text loader">Carregando</div>
+                </div>
+                <div class="ui two column very relaxed stackable grid">
+                    <div class="column left aligned" style="border-right: 1px solid rgba(34, 36, 38, 0.15);">
+                        <div class="ui form">
+                            <div class="field center aligned" id="home" style="text-align: center !important; margin-bottom: 40px;">
+                                <div class="ui tiny image">
+                                    <img src="img/png/unk.png">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <h3 class="ui header">Sign Up</h3>
+                            </div>
+                            <div class="field" style="margin-bottom: 5px; margin-top: 20px;">
+                                <label>Nickname</label>
+                                <div class="ui left icon input">
+                                <input autocomplete=off type="text" id="nick" name="nick" placeholder="Seu nickname" autofocus>
+                                <i class="user circle icon"></i>
+                                </div>
+                            </div>
+                            <div class="field" style="margin-bottom: 6px;">
+                                <label>Apelido</label>
+                                <div class="ui left icon input">
+                                    <input autocomplete=off id="apelido" name="apelido" type="text" placeholder="Seu Apelido">
+                                    <i class="user icon"></i>
+                                </div>
+                            </div>
+                            <div class="field" style="margin-bottom: 0px; margin-top: 0px;">
+                                <label>Description</label>
+                                <div class="ui left icon input">
+                                <input autocomplete=off type="text" id="description" name="description" placeholder="Uma descrição">
+                                <i class="align center icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column left aligned">
+                        <div class="ui form">
+                            <div class="field center aligned" style="text-align: center !important; margin-bottom: 20px;">
+                                <div class="ui tiny circular image">
+                                    <img id="img-selec" src="img/png/elyse.png" data-img="elyse.png" >
+                                </div>
+                            </div>
+                            <div class="field" style="margin-bottom: 5px;">
+                                <label>Password</label>
+                                <div class="ui left icon input">
+                                    <input autocomplete=off id="pass" name="pass" type="password" placeholder="Sua nova senha">
+                                    <i class="lock icon"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="field">
+                                <label>Token</label>
+                                <div class="ui left icon input">
+                                    <input autocomplete=off id="token" name="token" type="password" placeholder="Seu Token de acesso">
+                                    <i class="key icon"></i>
+                                </div>
+                            </div>
+                            <div class="inline fields">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                    <input type="radio" name="color" value="red" checked="checked">
+                                    <label><a class="ui red empty circular label"></a></label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                    <input type="radio" name="color" value="orange">
+                                    <label><a class="ui orange  empty circular label"></a></label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                    <input type="radio" name="color" value="yellow">
+                                    <label><a class="ui yellow empty circular label"></a></label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                    <input type="radio" name="color" value="olive">
+                                    <label><a class="ui olive empty circular label"></a></label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                    <input type="radio" name="color" value="green">
+                                    <label><a class="ui green empty circular label"></a></label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                    <input type="radio" value="teal" name="color">
+                                    <label><a class="ui teal empty circular label"></a></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inline fields">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                    <input type="radio" name="color" value="blue" >
+                                    <label><a class="ui blue empty circular label"></a></label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                    <input type="radio" name="color" value="violet">
+                                    <label><a class="ui violet empty circular label"></a></label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                    <input type="radio" value="purple" name="color">
+                                    <label><a class="ui purple empty circular label"></a></label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                    <input type="radio" value="pink" name="color">
+                                    <label><a class="ui pink empty circular label"></a></label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                    <input type="radio" value="brown" name="color">
+                                    <label><a class="ui brown empty circular label"></a></label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                    <input type="radio" value="grey" name="color">
+                                    <label><a class="ui grey empty circular label"></a></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field" style="padding-top: 11px;">
+                                <div id="sign-up" class="ui blue submit fluid primary button">Sign Up</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Modal Área -->
+
+
+    <!-- Modal Área -->
+    <!-- Modal indisponível -->
+    <div id="error-modal" class="ui basic tiny modal">
+        <div class="ui icon header">
+            <i class="exclamation triangle icon"></i>
+            Internal Server Error
+        </div>
+        <div class="content">
+            <p style="text-align: center">Sorry for the inconvenience, unable to login due to internal server error, please wait for server to be relocated.</p>
+        </div>
+    </div>
+
+    <div class="ui modal">
+        <div class="header">
+            Select Picture
+        </div>
+        <div class="image scrolling  content">
+            <div class="ui three stackable cards">
+                <div class="card ci">
+                    <div class="image" id="ade.jpg">
+                    <img src="./img/png/ade.jpg">
+                    </div>
+                </div>
+                <div class="card ci">
+                    <div class="image" id="christian.jpg">
+                    <img src="./img/png/christian.jpg">
+                    </div>
+                </div>
+                <div class="card ci" id="daniel.jpg">
+                    <div class="image">
+                    <img src="./img/png/daniel.jpg">
+                    </div>
+                </div>
+                <div class="card ci" id="elliot.jpg">
+                    <div class="image">
+                    <img src="./img/png/elliot.jpg">
+                    </div>
+                </div>
+                <div class="card ci" id="elyse.png">
+                    <div class="image">
+                    <img src="./img/png/elyse.png">
+                    </div>
+                </div>
+                <div class="card ci" id="helen.jpg">
+                    <div class="image">
+                    <img src="./img/png/helen.jpg">
+                    </div>
+                </div>
+                <div class="card ci" id="jenny.jpg">
+                    <div class="image">
+                    <img src="./img/png/jenny.jpg">
+                    </div>
+                </div>
+                <div class="card ci" id="joe.jpg">
+                    <div class="image">
+                    <img src="./img/png/joe.jpg">
+                    </div>
+                </div>
+                <div class="card ci" id="kristy.png">
+                    <div class="image">
+                    <img src="./img/png/kristy.png">
+                    </div>
+                </div>
+                <div class="card ci" id="laura.jpg">
+                    <div class="image">
+                    <img src="./img/png/laura.jpg">
+                    </div>
+                </div>
+                <div class="card ci" id="lindsay.png">
+                    <div class="image">
+                    <img src="./img/png/lindsay.png">
+                    </div>
+                </div>
+                <div class="card ci" id="matt.jpg">
+                    <div class="image">
+                    <img src="./img/png/matt.jpg">
+                    </div>
+                </div>
+                <div class="card ci" id="matthew.png">
+                    <div class="image">
+                    <img src="./img/png/matthew.png">
+                    </div>
+                </div>
+                <div class="card ci" id="molly.png">
+                    <div class="image">
+                    <img src="./img/png/molly.png">
+                    </div>
+                </div>
+                <div class="card ci" id="nan.jpg">
+                    <div class="image">
+                    <img src="./img/png/nan.jpg">
+                    </div>
+                </div>
+                <div class="card ci" id="patrick.png">
+                    <div class="image">
+                    <img src="./img/png/patrick.png">
+                    </div>
+                </div>
+                <div class="card ci" id="rachel.png">
+                    <div class="image">
+                    <img src="./img/png/rachel.png">
+                    </div>
+                </div>
+                <div class="card ci" id="/steve.jpg">
+                    <div class="image">
+                    <img src="./img/png/steve.jpg">
+                    </div>
+                </div>
+                <div class="card ci" id="stevie.jpg">
+                    <div class="image">
+                    <img src="./img/png/stevie.jpg">
+                    </div>
+                </div>
+                <div class="card ci" id="veronika.jpg">
+                    <div class="image">
+                    <img src="./img/png/veronika.jpg">
+                    </div>
+                </div>
+                <div class="card ci" id="zoe.jpg">
+                    <div class="image">
+                    <img src="./img/png/zoe.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui black deny button">
+            Nope
+            </div>
+            <div class="ui positive right labeled icon button">
+            Yep, that's me
+            <i class="checkmark icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/cadastro.js"></script>
+    <script>
+        $('#home').click(function() {
+            window.open('./')
+        });
+        $('#img-selec').click(function() {
+            $('.ui.modal')
+                .modal('setting', 'transition', 'scale')
+                .modal('show')
+            ;
+        });
+        $(document).on("click",".ci",function(e){
+            var seat_number = this.id.match(/\w{1,10}\.\w{3,3}/);
+            $('#img-selec').attr('src', 'img/png/'+seat_number)
+            $('#img-selec').attr('data-img', seat_number)
+            $('.ui.modal')
+                .modal('hide')
+            ;
+        });
+    </script>
+</body>
+</html>

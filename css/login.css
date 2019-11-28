@@ -1,0 +1,24 @@
+body > .grid {
+    height: 100%;
+}
+
+
+.column {
+    max-width: 750px;
+}
+
+.ui.segment {
+    border-radius: 15px !important;
+}
+
+.ui.button {
+    border-radius: 20px !important;
+}
+
+.ui.form input {
+    border-radius: 20px !important;
+}
+
+.hidden {
+    display: none !important;
+}

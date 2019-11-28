@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/png/favicon.png" type="image/png" />
+    <title>Sign In</title>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="semantic/semantic.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script src="semantic/semantic.js"></script>
+</head>
+<body>
+    
+    <div id="load" class="ui inverted dimmer">
+        <div class="ui large indeterminate text loader">Loading</div>
+    </div>
+    
+    <div class="ui middle aligned center aligned grid">
+        
+        <div class="column">
+            <div class="ui warning message hidden">
+                
+                <p id="msg-warning"></p>
+            </div>
+            <div class="ui segment" style="padding: 25px; margin-top: 0px;margin-bottom: 0px;">
+                <div id="loader-login" class="ui inverted dimmer">
+                    <div class="ui large indeterminate text loader">Carregando</div>
+                </div>
+                <div class="ui two column very relaxed stackable grid">
+                    <div class="column left aligned" style="border-right: 1px solid rgba(34, 36, 38, 0.15);">
+                        <div class="ui form">
+                            <div class="field center aligned" id="home" style="text-align: center !important; margin-bottom: 40px;">
+                                <div class="ui tiny image">
+                                    <img src="img/png/unk.png">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <h3 class="ui header">Sign In</h3>
+                            </div>
+                            <div id="field-login" class="field" style="margin-bottom: 5px; margin-top: 20px;">
+                                <label>Nickname</label>
+                                <div class="ui left icon input">
+                                <input autocomplete=off type="text" id="nick" name="nick" placeholder="Your Nickname" autofocus>
+                                <i class="user icon"></i>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label>Password</label>
+                                <div class="ui left icon input">
+                                    <input autocomplete=off id="pass" name="pass" type="password" placeholder="Your Password">
+                                    <i class="lock icon"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="field" style="margin-top: 20px;">
+                                <div id="sign-in" class="ui blue submit fluid primary button">Sign In</div>
+                            </div>
+                            <div class="field" style="text-align: center">
+                                <a 
+                                    id="cadastrar"
+                                    href="./cadastro.html" 
+                                    >Você não está cadastrado?</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="computer only tablet only middle aligned column">
+                        <div class="ui form">
+                            <div class="field" style="margin-bottom: 8px;" id="insta">
+                                <button class="ui instagram fluid button">
+                                <i class="instagram icon"></i>
+                                instagram
+                                </button>
+                            </div>
+                            <div class="field" style="margin-bottom: 8px;" id="linkedin">
+                                <button class="ui linkedin fluid button">
+                                <i class="linkedin icon"></i>
+                                linkedin
+                                </button>
+                            </div>
+                            <div class="field">
+                                <button class="ui google plus fluid button">
+                                <i class="google plus icon"></i>
+                                Google Plus
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Modal Área -->
+    
+    <!-- Modal Área -->
+    <!-- Modal indisponível -->
+    <div id="error-modal" class="ui basic tiny modal">
+        <div class="ui icon header">
+            <i class="exclamation triangle icon"></i>
+            Internal Server Error
+        </div>
+        <div class="content">
+            <p style="text-align: center">Sorry for the inconvenience, unable to login due to internal server error, please wait for server to be relocated.</p>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+    <script>
+        $('#insta').click(function() {
+            window.open('https://www.instagram.com/_robert_j_r/', '_blank') 
+        });
+        $('#linkedin').click(function() {
+            window.open('https://www.linkedin.com/in/paulo-roberto-66974a183/', '_blank') 
+        });
+        $('#home').click(function() {
+            window.open('./') 
+        });
+    </script>
+</body>
+</html>
